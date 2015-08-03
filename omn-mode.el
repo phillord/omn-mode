@@ -164,7 +164,8 @@ See `imenu-generic-expression' for details")
      . font-lock-type-face)
     (,(regexp-opt omn-mode-property-keywords)
      . font-lock-builtin-face)
-    ("\\w+:\\w+" . font-lock-function-name-face)))
+    ("\\w+:\\w+" . font-lock-function-name-face)
+    ("@\\w+" . font-lock-constant-face)))
 
 
 (defvar omn-mode-syntax-table
