@@ -124,8 +124,11 @@ See `imenu-generic-expression' for details")
        ;; if it is something else, then 8
        (t 8)))))
 
+
+;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.pomn\\'" . omn-mode))
 
+;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.omn\\'" . omn-mode))
 
 (defvar omn-font-lock-defaults
@@ -201,6 +204,7 @@ See `imenu-generic-expression' for details")
     (forward-line -1)
     (omn-indent-line)))
 
+;;;###autoload
 (define-derived-mode omn-mode fundamental-mode "Omn"
   "Doc string to add"
 
@@ -221,7 +225,6 @@ See `imenu-generic-expression' for details")
                (if (boundp 'electric-indent-chars)
                    (default-value 'electric-indent-chars)
                  '(?\n))))
-  
   (set (make-local-variable 'indent-line-function) 'omn-indent-line))
 
 
