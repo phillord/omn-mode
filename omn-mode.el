@@ -183,10 +183,8 @@ See `imenu-generic-expression' for details")
     ;; define comment characters for syntax
     (modify-syntax-entry ?\# "<" st)
     (modify-syntax-entry ?\n ">" st)
-    ;; Let's not confuse "words" and "symbols": "_" should not be part of the
-    ;; definition of a "word".
-    ;;(modify-syntax-entry ?\_ "w" st)
-    ;; For name space prefixes.
+    ;; For name space prefixes, including the "_" which is used by genids.
+    (modify-syntax-entry ?\_ "w" st)
     (modify-syntax-entry ?\: "w" st)
     st))
 
