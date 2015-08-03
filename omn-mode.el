@@ -52,6 +52,7 @@ See `imenu-generic-expression' for details")
     "Class:"
     "Individual:"
     "ObjectProperty:"
+    "DataProperty:"
     "Import:"
     "Datatype:"
     "AnnotationProperty:"
@@ -71,8 +72,12 @@ See `imenu-generic-expression' for details")
     "Range:"
     "InverseOf:"
     "SubPropertyOf:"
+    "SameAs:"
+    "DifferentFrom:"
+    "SubPropertyChain:"
     "Types:"
     "Facts:"
+    "HasKey:"
     ))
 
 
@@ -141,12 +146,19 @@ See `imenu-generic-expression' for details")
          "\\<only\\>"
          "\\<and\\>"
          "\\<or\\>"
+         "\\<not\\>"
          "\\<exactly\\>"
          "\\<max\\>"
          "\\<min\\>"
+         "\\<inverse\\>"
+         "\\<value\\>"
          "Transitive"
          "Functional"
          "InverseFunctional"
+         "Reflexive"
+         "Symmetric"
+         "Asymmetric"
+         "Irreflexive"
          )
        "\\|")
      . font-lock-type-face)
