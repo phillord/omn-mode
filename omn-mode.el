@@ -237,17 +237,5 @@ See `imenu-generic-expression' for details")
                  '(?\n))))
   (set (make-local-variable 'indent-line-function) 'omn-indent-line))
 
-
-;; interaction with a reasoner.....
-;; Define a struct using CL, which defines a command. Then send this to the command line
-;; program as a single key-value pair line.
-;;
-;; Write a parser for this in Java.
-;; Write a "command" interface, use annotation to mark each of the command setMethods.
-;;
-;; Have the command interface return results between tags as lisp. We can eval
-;; this, and get the result in that way.
-
 (provide 'omn-mode)
-
 ;;; omn-mode.el ends here
