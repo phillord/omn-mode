@@ -172,15 +172,6 @@ See `imenu-generic-expression' for details")
   (let ((st (make-syntax-table)))
     ;; string quotes
     (modify-syntax-entry ?\" "\"" st)
-    ;; This is a bit underhand, but we define the < and > characters to be
-    ;; "generic-string" delimiters. This results in fontification for URLs
-    ;; which is no bad thing. Additionally, it makes the comment character
-    ;; work, as "#" is a valid in a URL. The semantics of this isn't quite
-    ;; right, because the two characters are not paired. So <url> is
-    ;; recognised, but so is <url< or >url>.
-    ;; We could use a syntax-propertize-function to do more carefully.
-    (modify-syntax-entry ?\< "|" st)
-    (modify-syntax-entry ?\> "|" st)
     ;; define comment characters for syntax
     (modify-syntax-entry ?\# "<" st)
     (modify-syntax-entry ?\n ">" st)
@@ -218,6 +209,16 @@ See `imenu-generic-expression' for details")
 ;;;###autoload
 (define-derived-mode omn-mode fundamental-mode "Omn"
   "Doc string to add"
+
+  ;; Specialised syntax handling to recognise URLs. This is a bit underhand,
+  ;; but we define the < and > characters to be "generic-string" delimiters.
+  ;; This results in fontification for URLs which is no bad thing.
+  ;; Additionally, it makes the comment character work, as "#" is a valid in a
+  ;; URL. There is a slight irony that in a format for a web-centric document,
+  ;; we should treat URLs as having no semantics!
+  (setq-local syntax-propertize-function
+              (syntax-propertize-rules
+               ("\\(<\\)[^ ]*\\(>\\)" (1 "|") (2 "|"))))
 
   ;; font-lock stuff
   (setq font-lock-defaults
