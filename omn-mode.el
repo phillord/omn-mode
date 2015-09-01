@@ -208,7 +208,11 @@ See `imenu-generic-expression' for details")
 
 ;;;###autoload
 (define-derived-mode omn-mode fundamental-mode "Omn"
-  "Doc string to add"
+  "Major mode for editing OWL Manchester Notation.
+
+This is a format for specifying OWL ontologies, that is designed
+to be easy to type and to read. It is fully documented and
+specified at http://www.w3.org/TR/owl2-manchester-syntax/"
 
   ;; Specialised syntax handling to recognise URLs. This is a bit underhand,
   ;; but we define the < and > characters to be "generic-string" delimiters.
