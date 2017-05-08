@@ -1,2 +1,5 @@
 .cask
 dist
+*-autoloads.el
+*-pkg.el
+*.elc
