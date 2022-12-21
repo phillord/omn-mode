@@ -4,7 +4,7 @@
 
 ;; Author: Phillip Lord <phillip.lord@newcastle.ac.uk>
 ;; Maintainer: Phillip Lord <phillip.lord@newcastle.ac.uk>
-;; Website: http://www.russet.org.uk/blog
+;; Website: https://www.russet.org.uk/blog
 ;; Version: 1.2
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 ;;
@@ -212,7 +212,7 @@ See `imenu-generic-expression' for details")
 
 This is a format for specifying OWL ontologies, that is designed
 to be easy to type and to read. It is fully documented and
-specified at http://www.w3.org/TR/owl2-manchester-syntax/"
+specified at https://www.w3.org/TR/owl2-manchester-syntax/"
 
   ;; Specialised syntax handling to recognise URLs. This is a bit underhand,
   ;; but we define the < and > characters to be "generic-string" delimiters.
