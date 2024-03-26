@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2013  Free Software Foundation, Inc.
 
-;; Author: Phillip Lord <phillip.lord@newcastle.ac.uk>
-;; Maintainer: Phillip Lord <phillip.lord@newcastle.ac.uk>
+;; Author: Phillip Lord <phillip.lord@russet.org.uk>
+;; Maintainer: Phillip Lord <phillip.lord@russet.org.uk>
 ;; Website: https://www.russet.org.uk/blog
 ;; Version: 1.3
 
