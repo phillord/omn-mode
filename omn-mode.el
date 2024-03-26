@@ -66,7 +66,7 @@ See `imenu-generic-expression' for details")
     "SubClassOf:"
     "Annotations:"
     "Characteristics:"
-    "DisjointUnion:"
+    "DisjointUnionOf:"
     "DisjointWith:"
     "Domain:"
     "Range:"
